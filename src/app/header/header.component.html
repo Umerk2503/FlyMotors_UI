@@ -1,0 +1,28 @@
+<div class="navbar">
+    <div class="logo-title">
+        <img class="logo" src="/assets/Logo.png">
+        <h1 class="title">Fly Motors Club</h1>
+    </div>
+    <div class="middle-links">
+        <span class="middle-link" (mouseenter)="onMouseEnter('Parent1')" (mouseleave)="onMouseLeave()" >
+            <a href="">Listings</a>
+            <app-expand-nav *ngIf="hoveredMessage === 'Parent1'"  [message]="'Hello from Parent1'"></app-expand-nav>
+        </span>
+        <span class="middle-link" (mouseenter)="onMouseEnter('Parent2')" (mouseleave)="onMouseLeave()" >
+            <a href="">Sell your Car</a>
+            <app-expand-nav *ngIf="hoveredMessage === 'Parent2'"  [message]="'Hello from Parent2'"></app-expand-nav>
+        </span>
+        <span class="middle-link" (mouseenter)="onMouseEnter('Parent3')" (mouseleave)="onMouseLeave()" >
+            <a href="">Our Experts</a>
+            <app-expand-nav *ngIf="hoveredMessage === 'Parent3'"  [message]="'Hello from Parent3'"></app-expand-nav>
+        </span>
+    </div>
+    <div class="contacts">
+        <a href="">Contact Us</a>
+        <div class="user-info">
+            <img src="/assets/defaultprofile.png" alt="">
+            Hi
+            <a class="username" href="">User</a>
+        </div>
+    </div>
+</div>
