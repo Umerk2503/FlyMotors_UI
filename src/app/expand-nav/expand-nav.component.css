@@ -1,0 +1,14 @@
+.expand-nav{
+    position: absolute;
+    width: 600px;
+    height: 200px;
+    background: #fff;
+    border:1px solid blue;
+    padding: 20px;
+    left: -300px;
+    top:100%;
+}
+.expand-nav p{
+    font-size: 20px;
+    color:#333;
+}
