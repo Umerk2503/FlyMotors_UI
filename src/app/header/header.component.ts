@@ -15,10 +15,16 @@ export class HeaderComponent {
 
 
   onMouseEnter(message: string) {
-    this.hoveredMessage = message;// Show the child component on hover
+    this.hoveredMessage = message;
   }
 
   onMouseLeave() {
-    this.hoveredMessage = null;// Hide the child component when hover ends
+    this.hoveredMessage = null;
+  }
+
+  isMenuVisible: boolean = false; 
+
+  toggleMenu(): void {
+    this.isMenuVisible = !this.isMenuVisible;
   }
 }
