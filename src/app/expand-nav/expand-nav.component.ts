@@ -9,4 +9,5 @@ import { Component, Input } from '@angular/core';
 })
 export class ExpandNavComponent {
   @Input() message !: string; // Declare an input property
+  @Input() source !: string; // Declare an input property
 }
