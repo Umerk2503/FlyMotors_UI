@@ -6,15 +6,21 @@
     <div class="middle-links">
         <span class="middle-link" (mouseenter)="onMouseEnter('Parent1')" (mouseleave)="onMouseLeave()" >
             <a href="">Listings</a>
-            <app-expand-nav *ngIf="hoveredMessage === 'Parent1'"  [message]="'Hello from Parent1'"></app-expand-nav>
+            @if(hoveredMessage === 'Parent1'){
+                <app-expand-nav   [message]="'Hello from Parent1'"></app-expand-nav>
+            }
         </span>
         <span class="middle-link" (mouseenter)="onMouseEnter('Parent2')" (mouseleave)="onMouseLeave()" >
             <a href="">Sell your Car</a>
-            <app-expand-nav *ngIf="hoveredMessage === 'Parent2'"  [message]="'Hello from Parent2'"></app-expand-nav>
+            @if(hoveredMessage === 'Parent2'){
+                <app-expand-nav  [message]="'Hello from Parent2'"></app-expand-nav>
+            }
         </span>
         <span class="middle-link" (mouseenter)="onMouseEnter('Parent3')" (mouseleave)="onMouseLeave()" >
             <a href="">Our Experts</a>
-            <app-expand-nav *ngIf="hoveredMessage === 'Parent3'"  [message]="'Hello from Parent3'"></app-expand-nav>
+            @if(hoveredMessage === 'Parent3'){
+              <app-expand-nav   [message]="'Hello from Parent3'"></app-expand-nav>
+            }
         </span>
     </div>
     <div class="contacts">
