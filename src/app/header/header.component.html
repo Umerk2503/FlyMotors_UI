@@ -6,23 +6,53 @@
     <div class="middle-links">
         <span class="middle-link" (mouseenter)="onMouseEnter('Parent1')" (mouseleave)="onMouseLeave()" >
             <a href="">Listings</a>
-            <app-expand-nav *ngIf="hoveredMessage === 'Parent1'"  [message]="'Hello from Parent1'"></app-expand-nav>
+            @if(hoveredMessage === 'Parent1'){
+                <app-expand-nav [message]="'Choose from various listed cars from different brands'" [source]="'/assets/listing.jpg'"></app-expand-nav>
+            }
         </span>
         <span class="middle-link" (mouseenter)="onMouseEnter('Parent2')" (mouseleave)="onMouseLeave()" >
             <a href="">Sell your Car</a>
-            <app-expand-nav *ngIf="hoveredMessage === 'Parent2'"  [message]="'Hello from Parent2'"></app-expand-nav>
+            @if(hoveredMessage === 'Parent2'){
+                <app-expand-nav [message]="'Evaluate and sell your car at Best Price!'" [source]="'/assets/sellcar.jpg'"></app-expand-nav>
+            }
         </span>
         <span class="middle-link" (mouseenter)="onMouseEnter('Parent3')" (mouseleave)="onMouseLeave()" >
             <a href="">Our Experts</a>
-            <app-expand-nav *ngIf="hoveredMessage === 'Parent3'"  [message]="'Hello from Parent3'"></app-expand-nav>
+            @if(hoveredMessage === 'Parent3'){
+              <app-expand-nav [message]="'Avail guidance regarding cars with the help of our Car Experts!'" [source]="'/assets/expert.jpg'"></app-expand-nav>
+            }
         </span>
     </div>
     <div class="contacts">
+        <span class="contact-link" (mouseenter)="onMouseEnter('Contact')" (mouseleave)="onMouseLeave()">
         <a href="">Contact Us</a>
+        @if(hoveredMessage === 'Contact'){
+           <div class="contact-expand">
+            <a href="">Socials</a>
+            <span class="grey-divider"></span>
+            <a href="">Visit Us</a>
+            <span class="grey-divider"></span>
+            <a href="">Call Us</a>
+           </div>
+          }
+        </span>
         <div class="user-info">
             <img src="/assets/defaultprofile.png" alt="">
             Hi
             <a class="username" href="">User</a>
         </div>
     </div>
+    <div class="ham-menu">
+        <input class="menu-btn" type="checkbox" id="menu-btn" (change)="toggleMenu()">
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    </div>
 </div>
+@if(isMenuVisible){
+
+    <ul id="menu" class="menu">
+        <li><a href="#work">Our Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#careers">Careers</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+}
