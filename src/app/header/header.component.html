@@ -13,13 +13,13 @@
         <span class="middle-link" (mouseenter)="onMouseEnter('Parent2')" (mouseleave)="onMouseLeave()" >
             <a href="">Sell your Car</a>
             @if(hoveredMessage === 'Parent2'){
-                <app-expand-nav [message]="'Evaluate and sell your car at Best Price!'" [source]="'{{environment.imageUrl}}sellcar.jpg'"></app-expand-nav>
+                <app-expand-nav [message]="'Evaluate and sell your car at Best Price!'" [source]="environment.imageUrl +'sellcar.jpg'"></app-expand-nav>
             }
         </span>
         <span class="middle-link" (mouseenter)="onMouseEnter('Parent3')" (mouseleave)="onMouseLeave()" >
             <a href="">Our Experts</a>
             @if(hoveredMessage === 'Parent3'){
-              <app-expand-nav [message]="'Avail guidance regarding cars with the help of our Car Experts!'" [source]="'{{environment.imageUrl}}expert.jpg'"></app-expand-nav>
+              <app-expand-nav [message]="'Avail guidance regarding cars with the help of our Car Experts!'" [source]="environment.imageUrl +'expert.jpg'"></app-expand-nav>
             }
         </span>
     </div>
