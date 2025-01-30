@@ -1,6 +1,8 @@
+
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ExpandNavComponent } from '../expand-nav/expand-nav.component';
+import { environment } from '../../environments/environment';
 
 
 @Component({
@@ -12,7 +14,7 @@ import { ExpandNavComponent } from '../expand-nav/expand-nav.component';
 })
 export class HeaderComponent {
   hoveredMessage: string | null = null;
-
+  environment=environment;
 
   onMouseEnter(message: string) {
     this.hoveredMessage = message;
