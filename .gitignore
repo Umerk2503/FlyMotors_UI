@@ -16,8 +16,6 @@ karma.conf.js.map
 jest-test-results.json
 .werf/
 
-# Environment files
-src/environments/environment.*.ts
 
 # IDE-specific files
 .idea/
