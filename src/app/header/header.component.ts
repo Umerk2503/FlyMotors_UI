@@ -1,6 +1,8 @@
+
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ExpandNavComponent } from '../expand-nav/expand-nav.component';
+import { environment } from '../../environments/environment';
 
 
 @Component({
@@ -12,13 +14,19 @@ import { ExpandNavComponent } from '../expand-nav/expand-nav.component';
 })
 export class HeaderComponent {
   hoveredMessage: string | null = null;
-
+  environment=environment;
 
   onMouseEnter(message: string) {
-    this.hoveredMessage = message;// Show the child component on hover
+    this.hoveredMessage = message;
   }
 
   onMouseLeave() {
-    this.hoveredMessage = null;// Hide the child component when hover ends
+    this.hoveredMessage = null;
+  }
+
+  isMenuVisible: boolean = false; 
+
+  toggleMenu(): void {
+    this.isMenuVisible = !this.isMenuVisible;
   }
 }

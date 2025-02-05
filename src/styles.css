@@ -1,13 +1,24 @@
+@import url("https://www.k12insight.com/Lets-Talk/css/proximanova.css");
+
+:root {
+  --red: red;
+  --white: #eee;
+  --red-shadow: rgba(250, 1, 1, 0.35);
+  --black: #101414;
+}
+
 * {
-    box-sizing: border-box;
-  }
-  body {
-    margin: 0;
-    font-family: math;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background: radial-gradient(#303b37, #1a1f1d);
-    color: #e1eeeb;
-    min-height: 100vh;
-    width: 100%;
-  }
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: proxima-nova, helvetica, arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background: radial-gradient(#303b37, #1a1f1d); */
+  background-color: #fafdf6;
+  color: #e1eeeb;
+  min-height: 100vh;
+  width: 100%;
+}
